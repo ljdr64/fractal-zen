@@ -20,14 +20,14 @@ export default async function Footer() {
               href="/"
               className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
             >
-              Medusa Store
+              Fractal Zen Tienda
             </LocalizedClientLink>
           </div>
           <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
             {productCategories && productCategories?.length > 0 && (
               <div className="flex flex-col gap-y-2">
                 <span className="txt-small-plus txt-ui-fg-base">
-                  Categories
+                  Categorias
                 </span>
                 <ul
                   className="grid grid-cols-1 gap-2"
@@ -85,7 +85,7 @@ export default async function Footer() {
             {collections && collections.length > 0 && (
               <div className="flex flex-col gap-y-2">
                 <span className="txt-small-plus txt-ui-fg-base">
-                  Collections
+                  Collectiones
                 </span>
                 <ul
                   className={clx(
@@ -109,36 +109,37 @@ export default async function Footer() {
               </div>
             )}
             <div className="flex flex-col gap-y-2">
-              <span className="txt-small-plus txt-ui-fg-base">Medusa</span>
+              <span className="txt-small-plus txt-ui-fg-base">Fractal Zen</span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
-                  <a
-                    href="https://github.com/medusajs"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                    GitHub
+                  <a href="/sobre-nosotros" className="hover:text-ui-fg-base">
+                    Sobre nosotros
+                  </a>
+                </li>
+                <li>
+                  <a href="/contacto" className="hover:text-ui-fg-base">
+                    Contacto
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://docs.medusajs.com"
-                    target="_blank"
-                    rel="noreferrer"
+                    href="/preguntas-frecuentes"
                     className="hover:text-ui-fg-base"
                   >
-                    Documentation
+                    Preguntas frecuentes
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://github.com/medusajs/nextjs-starter-medusa"
-                    target="_blank"
-                    rel="noreferrer"
+                    href="/politica-de-envios"
                     className="hover:text-ui-fg-base"
                   >
-                    Source code
+                    Política de envíos
+                  </a>
+                </li>
+                <li>
+                  <a href="/catalogo" className="hover:text-ui-fg-base">
+                    Ver catálogo
                   </a>
                 </li>
               </ul>
@@ -147,7 +148,8 @@ export default async function Footer() {
         </div>
         <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
           <Text className="txt-compact-small">
-            © {new Date().getFullYear()} Medusa Store. All rights reserved.
+            © {new Date().getFullYear()} Fractal Zen. Todos los derechos
+            reservados.
           </Text>
           <MedusaCTA />
         </div>

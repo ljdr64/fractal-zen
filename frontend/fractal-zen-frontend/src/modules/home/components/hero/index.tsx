@@ -2,10 +2,7 @@ import Image from "next/image"
 
 const Hero = () => {
   return (
-    <div
-      className="h-[75vh] w-full border-b border-ui-border-base relative bg-cover bg-center"
-      style={{ backgroundImage: "url('/images/hero-sahumerios.jpg')" }}
-    >
+    <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-cover bg-center">
       <div className="absolute inset-0 bg-black z-0" />
       <div
         className="absolute inset-0 z-0 bg-center bg-cover opacity-60"
