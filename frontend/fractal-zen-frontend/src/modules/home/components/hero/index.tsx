@@ -6,11 +6,11 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black z-0" />
       <div
         className="absolute inset-0 z-0 bg-center bg-cover opacity-60"
-        style={{ backgroundImage: "url('/bg-home-fractal-zen.png')" }}
+        style={{ backgroundImage: "url('/images/bg-home-fractal-zen.png')" }}
       />
       <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center px-4 gap-6">
         <Image
-          src="/logo-white-fractal-zen.png"
+          src="/images/logo-png-white-fractal-zen.png"
           alt="Fractal Zen logo"
           width={400}
           height={400}

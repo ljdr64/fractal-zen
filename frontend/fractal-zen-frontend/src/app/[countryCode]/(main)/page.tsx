@@ -34,7 +34,7 @@ export default async function Home(props: {
     <>
       <Hero />
       {categories?.length > 0 && (
-        <section className="py-12 px-4">
+        <section className="py-12 px-10">
           <h2 className="text-2xl font-bold mb-6">Categorías</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {categories.map((cat) => (
@@ -43,15 +43,12 @@ export default async function Home(props: {
                 href={`/${countryCode}/categories/${cat.handle}`}
                 className="w-full max-w-[12rem] rounded shadow hover:shadow-lg transition overflow-hidden bg-white flex flex-col"
               >
-                {/* Imagen como fondo en div */}
                 <div
                   className="h-48 bg-cover bg-center"
                   style={{
                     backgroundImage: `url(/images/categories/${cat.handle}.webp)`,
                   }}
                 />
-
-                {/* Texto separado */}
                 <div className="p-4">
                   <h3 className="text-lg font-semibold text-center">
                     {cat.name}
