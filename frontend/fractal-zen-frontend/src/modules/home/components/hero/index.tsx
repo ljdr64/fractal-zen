@@ -1,25 +1,24 @@
-import Image from "next/image"
-
 const Hero = () => {
   return (
-    <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-cover bg-center">
-      <div className="absolute inset-0 bg-black z-0" />
-      <div
-        className="absolute inset-0 z-0 bg-center bg-cover opacity-60"
-        style={{ backgroundImage: "url('/images/bg-home-fractal-zen.png')" }}
-      />
-      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center px-4 gap-6">
-        <Image
-          src="/images/logo-png-white-fractal-zen.png"
-          alt="Fractal Zen logo"
-          width={400}
-          height={400}
-          priority
-        />
-        <h1 className="sr-only">Fractal Zen</h1>
-        <h2 className="text-4xl md:text-5xl text-white font-semibold drop-shadow">
-          Sahumerios, energía y armonía para tu espacio
-        </h2>
+    <div
+      className="h-[75vh] w-full bg-cover bg-center text-white"
+      style={{ backgroundImage: "url('/images/bg-home-fractal-zen.png')" }}
+    >
+      <div className="h-full w-full bg-black/50 flex flex-col">
+        <div className="flex-1 basis-[75%] flex justify-center items-end mt-2 sm:mt-4 md:mt-6 lg:mt-8">
+          <div
+            className="h-full aspect-square bg-contain bg-no-repeat bg-center"
+            style={{
+              backgroundImage: "url('/images/logo-png-white-fractal-zen.png')",
+            }}
+          />
+        </div>
+        <div className="flex-1 basis-[25%] flex justify-center items-start">
+          <h1 className="sr-only">Fractal Zen</h1>
+          <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-semibold drop-shadow px-4">
+            Sahumerios, energía y armonía para tu espacio
+          </h2>
+        </div>
       </div>
     </div>
   )
