@@ -1,5 +1,7 @@
 import { Suspense } from "react"
 
+import { FaShoppingCart } from "react-icons/fa"
+import { LuAlignJustify } from "react-icons/lu"
 import { listRegions } from "@lib/data/regions"
 import { StoreRegion } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
@@ -46,7 +48,14 @@ export default async function Nav() {
                   href="/cart"
                   data-testid="nav-cart-link"
                 >
-                  Carrito (0)
+                  <div className="flex gap-3 items-center">
+                    <div className="flex gap-0.5 items-center text-lg cursor-pointer select-none">
+                      <FaShoppingCart />
+                      <div className="absolute top-4 right-4 flex justify-center items-center rounded-full bg-black w-4 h-4 font-size-bold text-xs text-white">
+                        0
+                      </div>
+                    </div>
+                  </div>
                 </LocalizedClientLink>
               }
             >

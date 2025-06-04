@@ -6,6 +6,8 @@ import {
   PopoverPanel,
   Transition,
 } from "@headlessui/react"
+import { FaShoppingCart } from "react-icons/fa"
+import { LuAlignJustify } from "react-icons/lu"
 import { convertToLocale } from "@lib/util/money"
 import { HttpTypes } from "@medusajs/types"
 import { Button } from "@medusajs/ui"
@@ -85,7 +87,16 @@ const CartDropdown = ({
             className="hover:text-ui-fg-base"
             href="/cart"
             data-testid="nav-cart-link"
-          >{`Carrito (${totalItems})`}</LocalizedClientLink>
+          >
+            <div className="flex gap-3 items-center">
+              <div className="flex gap-0.5 items-center text-lg cursor-pointer select-none">
+                <FaShoppingCart />
+                <div className="absolute top-4 left-2.5 flex justify-center items-center rounded-full bg-black w-4 h-4 font-size-bold text-xs text-white">
+                  {totalItems}
+                </div>
+              </div>
+            </div>
+          </LocalizedClientLink>
         </PopoverButton>
         <Transition
           show={cartDropdownOpen}
