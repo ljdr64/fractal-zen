@@ -21,12 +21,34 @@ fractal-zen/
 
 ## 🚀 Getting Started
 
+### Start the whole project
+
+From the root folder, first give execute permission to the script (only once):
+
+```bash
+chmod +x start.sh
+```
+
+Then run:
+
+```bash
+./start.sh
+```
+
+This will:
+
+- Start the backend container (`fractal-postgres`)
+- Launch the Medusa backend at `http://localhost:9000`
+- Launch the frontend at `http://localhost:8000`
+
+---
+
 ### Backend
 
 1. Go to the backend folder:
 
    ```bash
-   cd backend
+   cd backend/fractal-zen-backend
    ```
 
 2. Install dependencies and start the server:
@@ -51,7 +73,7 @@ fractal-zen/
 1. Go to the frontend folder:
 
    ```bash
-   cd frontend
+   cd frontend/fractal-zen-frontend
    ```
 
 2. Install dependencies and start the dev server:

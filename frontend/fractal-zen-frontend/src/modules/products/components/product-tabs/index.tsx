@@ -85,31 +85,30 @@ const ShippingInfoTab = () => {
         <div className="flex items-start gap-x-2">
           <FastDelivery />
           <div>
-            <span className="font-semibold">Fast delivery</span>
+            <span className="font-semibold">Entrega rápida</span>
             <p className="max-w-sm">
-              Tu paquete llegará en 3 a 5 días hábiles a tu punto de recogida o
-              a la comodidad de tu hogar.
+              Tu paquete llegará en 3 a 5 días hábiles a tu punto de entrega o a
+              la comodidad de tu hogar.
             </p>
           </div>
         </div>
         <div className="flex items-start gap-x-2">
           <Refresh />
           <div>
-            <span className="font-semibold">Cambios sencillos</span>
+            <span className="font-semibold">Reposición garantizada</span>
             <p className="max-w-sm">
-              ¿No te queda bien? No te preocupes, te cambiaremos el producto por
-              uno nuevo.
+              Si recibís un producto dañado o en mal estado, te lo repondremos
+              sin cargo.
             </p>
           </div>
         </div>
         <div className="flex items-start gap-x-2">
           <Back />
           <div>
-            <span className="font-semibold">Devoluciones sencillas</span>
+            <span className="font-semibold">Devoluciones simples</span>
             <p className="max-w-sm">
-              Solo devuelve tu producto y te reembolsaremos tu dinero. Sin
-              preguntas: haremos todo lo posible para que su devolución sea sin
-              complicaciones.
+              Si tu compra no fue lo que esperabas, escribinos y coordinamos la
+              devolución sin complicaciones.
             </p>
           </div>
         </div>
