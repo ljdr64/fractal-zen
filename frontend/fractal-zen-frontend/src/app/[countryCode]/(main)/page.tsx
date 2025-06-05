@@ -36,7 +36,7 @@ export default async function Home(props: {
       {categories?.length > 0 && (
         <section className="py-12 px-10">
           <h2 className="text-2xl font-bold mb-6">Categorías</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {categories.map((cat) => (
               <a
                 key={cat.id}

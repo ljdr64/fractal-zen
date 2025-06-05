@@ -1,7 +1,6 @@
 import { Suspense } from "react"
 
-import { FaShoppingCart } from "react-icons/fa"
-import { LuAlignJustify } from "react-icons/lu"
+import { FaShoppingCart, FaUser } from "react-icons/fa"
 import { listRegions } from "@lib/data/regions"
 import { StoreRegion } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
@@ -21,13 +20,13 @@ export default async function Nav() {
             </div>
           </div>
 
-          <div className="flex items-center h-full">
+          <div className="hidden sm:flex items-center h-full">
             <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
+              className="text-2xl font-semibold hover:text-ui-fg-base uppercase"
               data-testid="nav-store-link"
             >
-              Fractal Zen Tienda
+              Fractal Zen
             </LocalizedClientLink>
           </div>
 
@@ -38,7 +37,7 @@ export default async function Nav() {
                 href="/account"
                 data-testid="nav-account-link"
               >
-                Cuenta
+                <FaUser className="w-6 h-6" />
               </LocalizedClientLink>
             </div>
             <Suspense
@@ -50,7 +49,7 @@ export default async function Nav() {
                 >
                   <div className="flex gap-3 items-center">
                     <div className="flex gap-0.5 items-center text-lg cursor-pointer select-none">
-                      <FaShoppingCart />
+                      <FaShoppingCart className="w-6 h-6" />
                       <div className="absolute top-4 right-4 flex justify-center items-center rounded-full bg-black w-4 h-4 font-size-bold text-xs text-white">
                         0
                       </div>
