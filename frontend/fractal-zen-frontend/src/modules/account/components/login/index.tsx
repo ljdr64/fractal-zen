@@ -33,7 +33,7 @@ const Login = ({ setCurrentView }: Props) => {
             data-testid="email-input"
           />
           <Input
-            label="Password"
+            label="Contraseña"
             name="password"
             type="password"
             autoComplete="current-password"
