@@ -48,19 +48,16 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
                 leaveFrom="opacity-100 backdrop-blur-2xl"
                 leaveTo="opacity-0"
               >
-                <PopoverPanel className="flex flex-col absolute w-[calc(100%-1rem)] sm:w-1/3 2xl:w-1/4 sm:min-w-min h-[calc(100vh-1rem)] z-30 inset-x-0 text-sm text-ui-fg-on-color m-2 backdrop-blur-2xl">
+                <PopoverPanel className="top-14 xl:left-[8.5rem] flex flex-col absolute w-[calc(100%-1rem)] sm:w-1/3 2xl:w-1/4 sm:min-w-min h-[calc(100vh-4.5rem)] z-30 inset-x-0 text-sm text-ui-fg-on-color my-2 backdrop-blur-2xl">
                   <div
                     data-testid="nav-menu-popup"
-                    className="flex flex-col h-full bg-[rgba(3,7,18,0.5)] rounded-rounded justify-between px-4 py-3"
+                    className="flex flex-col h-full bg-[rgba(3,7,18,0.5)] rounded-rounded justify-between px-6 py-6"
                   >
                     <div
                       className="flex justify-start flex-col gap-6"
                       id="xmark"
                     >
-                      <button data-testid="close-menu-button" onClick={close}>
-                        <FaTimes className="h-6 w-6" />
-                      </button>
-                      <ul className="flex flex-col gap-6 items-start justify-start px-2">
+                      <ul className="flex flex-col gap-6 items-start justify-start py-4">
                         {Object.entries(SideMenuItems).map(([name, href]) => {
                           return (
                             <li key={name}>

@@ -38,7 +38,7 @@ export default async function Home(props: {
           <h2 className="flex items-center justify-between text-2xl txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base mb-6">
             Categorias
           </h2>
-          <div className="justify-items-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="justify-items-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
             {categories.map((cat) => (
               <a
                 key={cat.id}
