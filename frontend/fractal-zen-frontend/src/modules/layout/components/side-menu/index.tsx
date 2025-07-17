@@ -48,16 +48,16 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
                 leaveFrom="opacity-100 backdrop-blur-2xl"
                 leaveTo="opacity-0"
               >
-                <PopoverPanel className="top-14 xl:left-[8.5rem] flex flex-col absolute w-[calc(100%-1rem)] sm:w-1/3 2xl:w-1/4 sm:min-w-min h-[calc(100vh-4.5rem)] z-30 inset-x-0 text-sm text-ui-fg-on-color my-2 backdrop-blur-2xl">
+                <PopoverPanel className="top-14 xl:left-28 flex flex-col absolute w-[calc(100%-1rem)] sm:w-1/3 2xl:w-1/4 sm:min-w-min h-[calc(100vh-4.5rem)] z-30 inset-x-0 text-sm text-ui-fg-on-color my-2 backdrop-blur-2xl">
                   <div
                     data-testid="nav-menu-popup"
-                    className="flex flex-col h-full bg-[rgba(3,7,18,0.5)] rounded-rounded justify-between px-6 py-6"
+                    className="flex flex-col h-full bg-[rgba(3,7,18,0.5)] rounded-rounded justify-between px-6 py-12 xl:p-12"
                   >
                     <div
                       className="flex justify-start flex-col gap-6"
                       id="xmark"
                     >
-                      <ul className="flex flex-col gap-6 items-start justify-start py-4">
+                      <ul className="flex flex-col gap-6 items-start justify-start">
                         {Object.entries(SideMenuItems).map(([name, href]) => {
                           return (
                             <li key={name}>
@@ -77,8 +77,8 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
                     <div className="flex flex-col gap-y-6">
                       <div
                         className="flex justify-between"
-                        onMouseEnter={toggleState.open}
-                        onMouseLeave={toggleState.close}
+                        // onMouseEnter={toggleState.open}
+                        // onMouseLeave={toggleState.close}
                       >
                         {regions && (
                           <CountrySelect
@@ -86,12 +86,6 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
                             regions={regions}
                           />
                         )}
-                        <ArrowRightMini
-                          className={clx(
-                            "transition-transform duration-150",
-                            toggleState.state ? "-rotate-90" : ""
-                          )}
-                        />
                       </div>
                       <Text className="flex justify-between txt-compact-small">
                         © {new Date().getFullYear()} Fractal Zen. Todos los

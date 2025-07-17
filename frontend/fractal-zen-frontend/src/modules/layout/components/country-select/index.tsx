@@ -73,25 +73,25 @@ const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
             : undefined
         }
       >
-        <ListboxButton className="py-1 w-full">
-          <div className="txt-compact-small flex items-start gap-x-2">
-            <span>Envío a:</span>
-            {current && (
-              <span className="txt-compact-small flex items-center gap-x-2">
-                {/* @ts-ignore */}
-                <ReactCountryFlag
-                  svg
-                  style={{
-                    width: "16px",
-                    height: "16px",
-                  }}
-                  countryCode={current.country ?? ""}
-                />
-                {current.label}
-              </span>
-            )}
-          </div>
-        </ListboxButton>
+        {/* <ListboxButton className="py-1 w-full"> */}
+        <div className="txt-compact-small flex items-start gap-x-2">
+          <span>Envío a:</span>
+          {current && (
+            <span className="txt-compact-small flex items-center gap-x-2">
+              {/* @ts-ignore */}
+              <ReactCountryFlag
+                svg
+                style={{
+                  width: "16px",
+                  height: "16px",
+                }}
+                countryCode={current.country ?? ""}
+              />
+              {current.label}
+            </span>
+          )}
+        </div>
+        {/* </ListboxButton> */}
         <div className="flex relative w-full min-w-[320px]">
           <Transition
             show={state}
@@ -109,7 +109,7 @@ const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
                   <ListboxOption
                     key={index}
                     value={o}
-                    className="py-2 hover:bg-gray-200 px-3 cursor-pointer flex items-center gap-x-2"
+                    className="py-2 hover:bg-gray-200 px-3 flex items-center gap-x-2"
                   >
                     {/* @ts-ignore */}
                     <ReactCountryFlag
