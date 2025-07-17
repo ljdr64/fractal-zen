@@ -14,19 +14,19 @@ export default async function Footer() {
   return (
     <footer className="border-t border-ui-border-base w-full">
       <div className="content-container flex flex-col w-full">
-        <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40">
+        <div className="flex flex-col gap-y-10 sm:gap-y-6 sm:flex-row items-start sm:justify-between py-32 sm:py-40">
           <div>
             <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
+              className="text-2xl txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
             >
               Fractal Zen Tienda
             </LocalizedClientLink>
           </div>
-          <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
+          <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2">
             {productCategories && productCategories?.length > 0 && (
-              <div className="flex flex-col gap-y-2">
-                <span className="txt-small-plus txt-ui-fg-base">
+              <div className="flex flex-col gap-y-2 text-ui-fg-subtle txt-small">
+                <span className="text-xl txt-small-plus txt-ui-fg-base">
                   Categorias
                 </span>
                 <ul
@@ -47,14 +47,11 @@ export default async function Footer() {
 
                     return (
                       <li
-                        className="flex flex-col gap-2 text-ui-fg-subtle txt-small"
+                        className="flex flex-col text-ui-fg-subtle txt-small"
                         key={c.id}
                       >
                         <LocalizedClientLink
-                          className={clx(
-                            "hover:text-ui-fg-base",
-                            children && "txt-small-plus"
-                          )}
+                          className={"hover:text-ui-fg-base"}
                           href={`/categories/${c.handle}`}
                           data-testid="category-link"
                         >
@@ -82,10 +79,10 @@ export default async function Footer() {
                 </ul>
               </div>
             )}
-            {collections && collections.length > 0 && (
+            {/* {collections && collections.length > 0 && (
               <div className="flex flex-col gap-y-2">
                 <span className="txt-small-plus txt-ui-fg-base">
-                  Collectiones
+                  Colecciones
                 </span>
                 <ul
                   className={clx(
@@ -107,9 +104,11 @@ export default async function Footer() {
                   ))}
                 </ul>
               </div>
-            )}
-            <div className="flex flex-col gap-y-2">
-              <span className="txt-small-plus txt-ui-fg-base">Fractal Zen</span>
+            )} */}
+            <div className="flex flex-col gap-y-2 text-ui-fg-subtle txt-small">
+              <span className="text-xl txt-small-plus txt-ui-fg-base">
+                Fractal Zen
+              </span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
                   <a href="/sobre-nosotros" className="hover:text-ui-fg-base">
@@ -146,8 +145,8 @@ export default async function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
-          <Text className="txt-compact-small">
+        <div className="flex flex-col sm:flex-row w-full mb-16 justify-between text-ui-fg-muted">
+          <Text className="text-sm txt-compact-small">
             © {new Date().getFullYear()} Fractal Zen. Todos los derechos
             reservados.
           </Text>
