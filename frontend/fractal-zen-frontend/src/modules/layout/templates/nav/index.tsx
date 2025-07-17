@@ -23,7 +23,7 @@ export default async function Nav() {
           <div className="hidden sm:flex items-center h-full">
             <LocalizedClientLink
               href="/"
-              className="text-2xl font-semibold hover:text-ui-fg-base uppercase"
+              className="text-2xl txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
               data-testid="nav-store-link"
             >
               Fractal Zen

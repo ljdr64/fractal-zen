@@ -31,7 +31,10 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
                   data-testid="nav-menu-button"
                   className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base"
                 >
-                  <FaBars className="h-6 w-6" />
+                  <span className="hidden sm:block text-2xl txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase">
+                    Menu
+                  </span>
+                  <FaBars className="h-6 w-6 sm:hidden" />
                 </Popover.Button>
               </div>
 
@@ -50,27 +53,30 @@ const SideMenu = ({ regions }: { regions: HttpTypes.StoreRegion[] | null }) => {
                     data-testid="nav-menu-popup"
                     className="flex flex-col h-full bg-[rgba(3,7,18,0.5)] rounded-rounded justify-between px-4 py-3"
                   >
-                    <div className="flex justify-start" id="xmark">
+                    <div
+                      className="flex justify-start flex-col gap-6"
+                      id="xmark"
+                    >
                       <button data-testid="close-menu-button" onClick={close}>
                         <FaTimes className="h-6 w-6" />
                       </button>
+                      <ul className="flex flex-col gap-6 items-start justify-start px-2">
+                        {Object.entries(SideMenuItems).map(([name, href]) => {
+                          return (
+                            <li key={name}>
+                              <LocalizedClientLink
+                                href={href}
+                                className="text-2xl leading-10 hover:text-ui-fg-disabled uppercase tracking-wide"
+                                onClick={close}
+                                data-testid={`${name.toLowerCase()}-link`}
+                              >
+                                {name}
+                              </LocalizedClientLink>
+                            </li>
+                          )
+                        })}
+                      </ul>
                     </div>
-                    <ul className="flex flex-col gap-6 items-start justify-start px-2">
-                      {Object.entries(SideMenuItems).map(([name, href]) => {
-                        return (
-                          <li key={name}>
-                            <LocalizedClientLink
-                              href={href}
-                              className="text-2xl leading-10 hover:text-ui-fg-disabled uppercase tracking-wide"
-                              onClick={close}
-                              data-testid={`${name.toLowerCase()}-link`}
-                            >
-                              {name}
-                            </LocalizedClientLink>
-                          </li>
-                        )
-                      })}
-                    </ul>
                     <div className="flex flex-col gap-y-6">
                       <div
                         className="flex justify-between"
