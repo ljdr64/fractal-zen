@@ -21,7 +21,7 @@ const Register = ({ setCurrentView }: Props) => {
       data-testid="register-page"
     >
       <h1 className="text-large-semi uppercase mb-6">
-        Hazte socio de Medusa Store
+        ¡Forma parte de Fractal Zen!
       </h1>
       <p className="text-center text-base-regular text-ui-fg-base mb-4">
         Crea tu perfil de miembro de Medusa Store y accede a una experiencia de
