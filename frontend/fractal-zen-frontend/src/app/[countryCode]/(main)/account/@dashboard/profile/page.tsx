@@ -24,7 +24,7 @@ export default async function Profile() {
   }
 
   return (
-    <div className="w-full" data-testid="profile-page-wrapper">
+    <div className="w-full px-8" data-testid="profile-page-wrapper">
       <div className="mb-8 flex flex-col gap-y-4">
         <h1 className="text-2xl-semi">Perfil</h1>
         <p className="text-base-regular">

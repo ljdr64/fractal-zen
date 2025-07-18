@@ -24,7 +24,7 @@ export default async function Addresses(props: {
   }
 
   return (
-    <div className="w-full" data-testid="addresses-page-wrapper">
+    <div className="w-full px-8" data-testid="addresses-page-wrapper">
       <div className="mb-8 flex flex-col gap-y-4">
         <h1 className="text-2xl-semi">Direcciones de envío</h1>
         <p className="text-base-regular">
